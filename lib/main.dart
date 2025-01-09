@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:islami_app/home/hadeth_Details.dart';
 import 'package:islami_app/home/home.dart';
 
 import 'sura_details.dart';
@@ -18,6 +19,7 @@ void main(){
         routes: {
           HomeScreen.routeName:(context)=>HomeScreen(),
           SuraDetailsScreen.routName:(context)=>SuraDetailsScreen(),
+          HadethDetailsScreen.routName:(context)=>HadethDetailsScreen(),
 
         }
         ,
