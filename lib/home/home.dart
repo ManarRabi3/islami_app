@@ -5,6 +5,7 @@ import 'package:islami_app/home/tabs/quran.dart';
 import 'package:islami_app/home/tabs/radio.dart';
 import 'package:islami_app/home/tabs/sebha.dart';
 import 'package:islami_app/home/tabs/settings.dart';
+import 'package:islami_app/my_theme_data.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "Home";
@@ -31,46 +32,41 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.transparent,
             title: Text(
               "Islami",
-              style: GoogleFonts.elMessiri(
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
+              style: Theme.of(context).textTheme.bodyLarge
               ),
+
             ),
-          ),
+
           bottomNavigationBar: BottomNavigationBar(
               currentIndex: selectedIndex,
               onTap: (value) {
                 selectedIndex = value;
                 setState(() {});
               },
-              backgroundColor: Color(0xFFB7935F),
-              type: BottomNavigationBarType.shifting,
-              selectedItemColor: Colors.black,
-              unselectedItemColor: Colors.white,
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
+              //backgroundColor: MyThemeData.primaryColor,
+
               items: [
                 BottomNavigationBarItem(
                     icon:
                         ImageIcon(AssetImage("assets/images/moshaf_blue.png")),
                     label: "",
-                    backgroundColor: Color(0xFFB7935F)),
+                   ),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/radio.png")),
                     label: "",
-                    backgroundColor: Color(0xFFB7935F)),
+                   ),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/sebha.png")),
                     label: "",
-                    backgroundColor: Color(0xFFB7935F)),
+                  ),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/ahadeth.png")),
                     label: "",
-                    backgroundColor: Color(0xFFB7935F)),
+                   ),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.settings),
                     label: "",
-                    backgroundColor: Color(0xFFB7935F)),
+                   ),
               ]),
           body: tabs[selectedIndex],
         ),
