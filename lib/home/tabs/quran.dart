@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/sura_details.dart';
 import 'package:islami_app/sura_model.dart';
 
+import '../../my_theme_data.dart';
+
 class QuranTab extends StatelessWidget {
   QuranTab({super.key});
 
@@ -134,19 +136,16 @@ class QuranTab extends StatelessWidget {
       ),
        Divider(
         thickness: 3,
-        color: Color(0xFFB7935F),
+        color: primaryColor,
       ),
       Text(
         "Sura Name",
         textAlign: TextAlign.center,
-        style: GoogleFonts.elMessiri(
-          fontWeight: FontWeight.w600,
-          fontSize: 25,
-        ),
+        style: Theme.of(context).textTheme.bodyMedium,
       ),
       Divider(
         thickness: 3,
-        color: Color(0xFFB7935F),
+        color: primaryColor,
       ),
       Expanded(
         child: ListView.separated(

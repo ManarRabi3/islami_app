@@ -56,7 +56,7 @@ return Column(
                 textAlign:  TextAlign.center,
                 style: GoogleFonts.inder(
                   fontWeight: FontWeight.w600,
-                  fontSize: 20,
+                  fontSize: 25,
                 ),),
             );
 
