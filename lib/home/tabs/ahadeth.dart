@@ -1,8 +1,10 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/hadeth_model.dart';
 import 'package:islami_app/home/hadeth_Details.dart';
+import 'package:islami_app/home/home.dart';
 
 class AhadethTab extends StatefulWidget {
   AhadethTab({super.key});
@@ -31,11 +33,11 @@ return Column(
           color: Color(0xFFB7935F),
         ),
         Text(
-          "Ahadeth",
+          "ahadeth".tr(),
           textAlign: TextAlign.center,
           style: GoogleFonts.elMessiri(
             fontWeight: FontWeight.w600,
-            fontSize: 25,
+            fontSize: 30,
           ),
         ),
         Divider(
@@ -55,8 +57,8 @@ return Column(
               child: Text(allAhadeth[index].title,
                 textAlign:  TextAlign.center,
                 style: GoogleFonts.inder(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 25,
+                 // fontWeight: FontWeight.w600,
+                  fontSize: 30,
                 ),),
             );
 
