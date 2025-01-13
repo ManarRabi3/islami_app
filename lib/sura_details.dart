@@ -49,7 +49,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
               )
             ),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(18.0),
               child: ListView.builder(
                   itemBuilder: (context, index){
                 return Text("${verses[index]} (${index+1})",
